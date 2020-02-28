@@ -36,3 +36,8 @@ Route::get("/form-list-user",function (){
 
 //Route ::get("/form-list-user","UserController@listName");
 Route ::get("/form-edit","UserController@listName");
+
+Route ::get("/","WebController@home");
+Route ::get("/product","WebController@product");
+Route ::get("/listing","WebController@listing");
+
