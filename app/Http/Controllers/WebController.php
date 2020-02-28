@@ -10,29 +10,44 @@ class WebController extends Controller
     public function home(){
         $products = [
            [
-               'name'=>"Áo Luci",
-               'image'=>"img/cart-page/product-1.jpg",
+               'name'=>"Áo Man",
+               'image'=>"img/cart-page/1.jpg",
                'price'=>"10$"
            ],
             [
-                'name'=>"Áo Luci",
-                'image'=>"img/cart-page/product-2.jpg",
-                'price'=>"10$"
+                'name'=>"Giầy Lucci",
+                'image'=>"img/cart-page/2.jpg",
+                'price'=>"15$"
             ],
             [
-                'name'=>"Áo Luci",
-                'image'=>"img/cart-page/product-3.jpg",
-                'price'=>"10$"
+                'name'=>"Ba lô",
+                'image'=>"img/cart-page/3.jpg",
+                'price'=>"18$"
             ],
             [
-                'name'=>"Áo Luci",
-                'image'=>"img/cart-page/product-1.jpg",
-                'price'=>"10$"
+                'name'=>"Áo Women",
+                'image'=>"img/cart-page/4.jpg",
+                'price'=>"19$"
             ],
             [
-                'name'=>"Áo Luci",
-                'image'=>"img/cart-page/product-3.jpg",
-                'price'=>"10$"
+                'name'=>"Mũ",
+                'image'=>"img/cart-page/5.jpg",
+                'price'=>"11$"
+            ],
+            [
+                'name'=>"Áo ",
+                'image'=>"img/cart-page/6.jpg",
+                'price'=>"20$"
+            ],
+            [
+                'name'=>"Khăn",
+                'image'=>"img/cart-page/7.jpg",
+                'price'=>"18$"
+            ],
+            [
+                'name'=>"Túi Sách",
+                'image'=>"img/cart-page/8.jpg",
+                'price'=>"5$"
             ],
 
         ];
