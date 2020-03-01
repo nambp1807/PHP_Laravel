@@ -19,14 +19,14 @@
                 <th>Mark</th>
             </thead>
             <tbody>
-            <?php  foreach ($students as $s):?>
+             @foreach ($students as $s)
                 <tr>
                     <td>#<?php echo $s['id'];?></td>
                     <td><?php echo $s['name'];?></td>
                     <td><?php echo $s['email'];?></td>
                     <td><?php echo $s['mark'];?></td>
                 </tr>
-            <?php endforeach;?>
+            @endforeach
             </tbody>
         </table>
 </body>

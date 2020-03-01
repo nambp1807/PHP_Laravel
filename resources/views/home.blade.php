@@ -1,11 +1,11 @@
-@extends('layout')
+    @extends('layout')
 
 @section('content')
 
     <h3>Sản phẩm </h3>
     <div class="row" id="product-filter">
 
-        @foreach ($products as $p)
+        @foreach ($home as $h)
 {{--            {{$loop->index}}--}}
 {{--            @if($loop->index == 5) @continue @endif--}}
 {{--            @continue($loop->index==5)--}}
@@ -13,12 +13,12 @@
             <div class="mix col-lg-3 col-md-6 best">
                 <div class="product-item">
                     <figure>
-                        <img style="height: 270px;width: 330px" src="{{ $p['image'] }}" alt="">
+                        <img style="height: 270px;width: 330px" src="{{ $h['image'] }}" alt="">
 
                     </figure>
                     <div class="product-info">
-                        <h6>{{ $p['name']}}</h6>
-                        <p>{{ $p['price']}}</p>
+                        <h6>{{ $h['name']}}</h6>
+                        <p>{{ $h['price']}}</p>
                         <a href="#" class="site-btn btn-line">ADD TO CART</a>
                     </div>
                 </div>
