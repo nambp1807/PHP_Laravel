@@ -18,7 +18,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($listings as $l)
+                                @foreach($listing as $l)
                                     <tr>
                                         <td class="cart-pic first-row"><img style="height: 100px;width: 150px" src="{{ $l['image'] }}" alt=""></td>
                                         <td class="cart-title first-row">

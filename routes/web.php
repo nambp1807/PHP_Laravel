@@ -16,9 +16,8 @@ Route::get('/', function () {
 });
 //Route::METHOD(path_string,HANDLE_FUNCITON);
 // Method : post get put delete ...  CRUD
-Route :: get("/xin-chao",function (){
-    echo "hello mọi người";
-});
+
+
 /*
 *Lưu ý
  * chạy URL trên trình duyệt --> method get
