@@ -59,7 +59,7 @@
                                     <li class="subtotal">Subtotal <span>$240.00</span></li>
                                     <li class="cart-total">Total <span>$240.00</span></li>
                                 </ul>
-                                <a href="#" class="proceed-btn">PROCEED TO CHECK OUT</a>
+                                <a href="/" class="proceed-btn">PROCEED TO CHECK OUT</a>
                             </div>
                         </div>
                     </div>
