@@ -34,7 +34,7 @@
     </div>
     <!-- Banner Section End -->
 
-    <a href="/php_laravel/public/listing">
+    <a href="/listing">
         <button class="btn btn-light" >List of products </button>
     </a>
     <div class="row" id="product-filter">
@@ -53,7 +53,7 @@
                     <div class="product-info">
                         <h6>{{ $h['name']}}</h6>
                         <p>{{ $h['price']}}</p>
-                        <a href="/php_laravel/public/product" class="site-btn btn-line">ADD TO CART</a>
+                        <a href="/product" class="site-btn btn-line">ADD TO CART</a>
                     </div>
                 </div>
             </div>
