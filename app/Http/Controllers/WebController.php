@@ -64,15 +64,7 @@ class WebController extends Controller
                 'prices'=>"30$"
             ],
          ];
-    private function getProductByID($id)
-    {
-        foreach ($this->allProducts as $key => $product) {
-            if ($product['id'] == $id) {
-                return $product;
-            }
-        }
-        return null;
-    }
+
     public function home(){
         return view("home")->with('home',$this->allproducts);
     }
@@ -82,12 +74,5 @@ class WebController extends Controller
     public function listing(){
         return view("listing")->with('listing',$this->allproducts);
     }
-    public function productDetail($id)
-    {
-        if ($this->getProductByID($id)) {
-            return view('product_detail')->with('product', $this->getProductByID($id));
-        } else {
-            return redirect()->route('product', ["error" => "San pham khong ton tai"]);
-        }
-    }
+
 }
