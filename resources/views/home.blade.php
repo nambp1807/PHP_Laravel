@@ -39,7 +39,7 @@
     </a>
     <div class="row" id="product-filter">
 
-        @foreach ($products as $p)
+        @foreach ($newests as $p)
             <div class="mix col-lg-3 col-md-6 best">
                 <div class="product-item">
                     <figure>
@@ -59,7 +59,7 @@
             </a>
             <div class="row" id="product-filter">
 
-                @foreach ($category as $c)
+                @foreach ($newests as $c)
                     <div class="mix col-lg-3 col-md-6 best">
                         <div class="product-item">
                             <figure>
@@ -81,7 +81,7 @@
                     </a>
                     <div class="row" id="product-filter">
 
-                        @foreach ($categorys as $c)
+                        @foreach ($exs as $c)
                             <div class="mix col-lg-3 col-md-6 best">
                                 <div class="product-item">
                                     <figure>
