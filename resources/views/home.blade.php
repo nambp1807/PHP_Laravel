@@ -39,7 +39,7 @@
     </a>
     <div class="row" id="product-filter">
 
-        @foreach ($product as $p)
+        @foreach ($products as $p)
             <div class="mix col-lg-3 col-md-6 best">
                 <div class="product-item">
                     <figure>

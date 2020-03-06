@@ -11,10 +11,10 @@ class WebController extends Controller
 
     public function home()
     {
-        $products = Product::take(4)->orderBy('price')->get();
+        $products = Product::take(4)->get();
         $category = Product::take(4)->orderBy('price','asc')->get();
         $categorys = Product::take(4)->orderBy('price', 'desc')->get();
-        return view("home", ['product' => $products, 'category' => $category, 'categorys' => $categorys]);
+        return view("home", ['products' => $products, 'category' => $category, 'categorys' => $categorys]);
     }
 
     public function listing()
