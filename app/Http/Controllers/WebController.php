@@ -11,7 +11,7 @@ class WebController extends Controller
 
     public function home()
     {
-        $products = Product::take(4)->orderBy('created_at', 'desc')->get();
+        $products = Product::take(4)->orderBy('price')->get();
         $category = Product::take(4)->orderBy('price','asc')->get();
         $categorys = Product::take(4)->orderBy('price', 'desc')->get();
         return view("home", ['product' => $products, 'category' => $category, 'categorys' => $categorys]);
