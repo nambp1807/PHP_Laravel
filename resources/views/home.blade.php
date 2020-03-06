@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="img/banner-1.jpg" alt="">
+                        <img src="{{asset("img/banner-1.jpg")}}" alt="">
                         <div class="inner-text">
                             <h4>Men’s</h4>
                         </div>
@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="img/banner-2.jpg" alt="">
+                        <img src="{{asset("img/banner-2.jpg")}}" alt="">
                         <div class="inner-text">
                             <h4>Women’s</h4>
                         </div>
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="single-banner">
-                        <img src="img/banner-3.jpg" alt="">
+                        <img src="{{"img/banner-3.jpg"}}" alt="">
                         <div class="inner-text">
                             <h4>Kid’s</h4>
                         </div>
@@ -109,7 +109,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
                             <div class="single-latest-blog">
-                                <img src="img/latest-1.jpg" alt="">
+                                <img src="{{asset("img/latest-1.jpg")}}" alt="">
                                 <div class="latest-text">
                                     <div class="tag-list">
                                         <div class="tag-item">
@@ -130,7 +130,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single-latest-blog">
-                                <img src="img/latest-2.jpg" alt="">
+                                <img src="{{asset("img/latest-2.jpg")}}" alt="">
                                 <div class="latest-text">
                                     <div class="tag-list">
                                         <div class="tag-item">
@@ -151,7 +151,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="single-latest-blog">
-                                <img src="img/latest-3.jpg" alt="">
+                                <img src="{{asset("img/latest-3.jpg")}}" alt="">
                                 <div class="latest-text">
                                     <div class="tag-list">
                                         <div class="tag-item">
@@ -176,7 +176,7 @@
                             <div class="col-lg-4">
                                 <div class="single-benefit">
                                     <div class="sb-icon">
-                                        <img src="img/icon-1.png" alt="">
+                                        <img src="{{asset("img/icon-1.png")}}" alt="">
                                     </div>
                                     <div class="sb-text">
                                         <h6>Free Shipping</h6>
@@ -187,7 +187,7 @@
                             <div class="col-lg-4">
                                 <div class="single-benefit">
                                     <div class="sb-icon">
-                                        <img src="img/icon-2.png" alt="">
+                                        <img src="{{asset("img/icon-2.png")}}" alt="">
                                     </div>
                                     <div class="sb-text">
                                         <h6>Delivery On Time</h6>
@@ -198,7 +198,7 @@
                             <div class="col-lg-4">
                                 <div class="single-benefit">
                                     <div class="sb-icon">
-                                        <img src="img/icon-1.png" alt="">
+                                        <img src="{{asset("img/icon-1.png")}}" alt="">
                                     </div>
                                     <div class="sb-text">
                                         <h6>Secure Payment</h6>
