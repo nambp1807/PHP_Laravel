@@ -35,29 +35,67 @@
     <!-- Banner Section End -->
 
     <a href="/listing">
-        <button class="btn btn-light" >List of products </button>
+        <button class="btn btn-light" style="margin-bottom: 5px">Sản phẩm mới nhất</button>
     </a>
     <div class="row" id="product-filter">
 
-        @foreach ($home as $h)
-{{--            {{$loop->index}}--}}
-{{--            @if($loop->index == 5) @continue @endif--}}
-{{--            @continue($loop->index==5)--}}
-{{--            @break($loop->index >7)--}}
+        @foreach ($product as $p)
             <div class="mix col-lg-3 col-md-6 best">
                 <div class="product-item">
                     <figure>
-                        <img style="height: 270px;width: 330px" src="{{ $h['image'] }}" alt="">
-
+                        <img style="height: 270px;width: 330px" src="{{$p->thumbnail}}" alt="">
                     </figure>
                     <div class="product-info">
-                        <h6>{{ $h['name']}}</h6>
-                        <p>{{ $h['price']}}</p>
-                        <a href="/product" class="site-btn btn-line">ADD TO CART</a>
+                        <h6>{{ $p->product_name}}</h6>
+                        <p>$ {{ $p->price}}</p>
+                        <a href="/listing" class="site-btn btn-line">+ Quick View</a>
                     </div>
                 </div>
             </div>
-        @endforeach;
+    @endforeach
+        <!-- -->
+            <a href="/listing">
+                <button class="btn btn-light" style="margin-bottom: 5px" >Sản phẩm giá thấp nhất</button>
+            </a>
+            <div class="row" id="product-filter">
+
+                @foreach ($category as $c)
+                    <div class="mix col-lg-3 col-md-6 best">
+                        <div class="product-item">
+                            <figure>
+                                <img style="height: 270px;width: 330px" src="{{$c->thumbnail}}" alt="">
+                            </figure>
+                            <div class="product-info">
+                                <h6>{{ $c->product_name}}</h6>
+                                <p>$ {{ $c->price}}</p>
+                                <a href="/listing" class="site-btn btn-line">+ Quick View</a><!--Cái href để trỏ đến cái id đấy-->
+                            </div>
+                        </div>
+                    </div>
+            @endforeach
+
+
+        <!---->
+                    <a href="/listing">
+                        <button class="btn btn-light" style="margin-bottom: 5px" >Sản phẩm giá cao nhất</button>
+                    </a>
+                    <div class="row" id="product-filter">
+
+                        @foreach ($categorys as $c)
+                            <div class="mix col-lg-3 col-md-6 best">
+                                <div class="product-item">
+                                    <figure>
+                                        <img style="height: 270px;width: 330px" src="{{$c->thumbnail}}" alt="">
+                                    </figure>
+                                    <div class="product-info">
+                                        <h6>{{ $c->product_name}}</h6>
+                                        <p>$ {{ $c->price}}</p>
+                                        <a href="/listing" class="site-btn btn-line">+ Quick View</a>
+                                    </div>
+                                </div>
+                            </div>
+                    @endforeach
+        <!---->
         <!-- Latest Blog Section Begin -->
             <section class="latest-blog spad">
                 <div class="container">

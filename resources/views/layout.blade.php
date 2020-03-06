@@ -44,10 +44,6 @@
         </div>
     </section>
     <!-- Hero Section End -->
-
-
-
-
     <!-- Deal Of The Week Section Begin-->
     <section class="deal-of-week set-bg spad" data-setbg="img/time-bg.jpg">
         <div class="container">
@@ -55,13 +51,6 @@
         </div>
     </section>
     <!-- Deal Of The Week Section End -->
-
-
-
-
-
-
-
    @includeFirst(['html.footer','footer'])
 
 </body>

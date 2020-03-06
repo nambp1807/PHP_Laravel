@@ -2,77 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 
 class WebController extends Controller
 {
 
 
-      private  $allproducts = [
-            [
-                'name'=>"Áo Man",
-                'image'=>"img/cart-page/1.jpg",
-                'price'=>"10$",
-                'prices'=>"15$"
-            ],
-            [
-                'name'=>"Giầy Lucci",
-                'image'=>"img/cart-page/2.jpg",
-                'price'=>"15$",
-                'prices'=>"52$"
-            ],
-            [
-                'name'=>"Ba lô",
-                'image'=>"img/cart-page/3.jpg",
-                'price'=>"18$",
-                'prices'=>"35$"
-            ],
-            [
-                'name'=>"Áo Women",
-                'image'=>"img/cart-page/4.jpg",
-                'price'=>"19$",
-                'prices'=>"55$"
-            ],
-            [
-                'name'=>"Mũ",
-                'image'=>"img/cart-page/5.jpg",
-                'price'=>"11$",
-                'prices'=>"85$"
-            ],
-            [
-                'name'=>"Áo ",
-                'image'=>"img/cart-page/6.jpg",
-                'price'=>"20$",
-                'prices'=>"65$"
-            ],
-            [
-                'name'=>"Khăn",
-                'image'=>"img/cart-page/7.jpg",
-                'price'=>"18$",
-                'prices'=>"28$"
-            ],
-            [
-                'name'=>"Túi Sách",
-                'image'=>"img/cart-page/8.jpg",
-                'price'=>"5$",
-                'prices'=>"10$"
-            ],
-            [
-                'name'=>"Áo Man",
-                'image'=>"img/cart-page/1.jpg",
-                'price'=>"10$",
-                'prices'=>"30$"
-            ],
-         ];
+    public function home()
+    {
+        $products = Product::take(4)->orderBy('product_name', 'desc')->get();
+        $category = Product::take(4)->orderBy('price')->get();
+        $categorys = Product::take(4)->orderBy('price', 'desc')->get();
+        return view("home", ['product' => $products, 'category' => $category, 'categorys' => $categorys]);
+    }
 
-    public function home(){
-        return view("home")->with('home',$this->allproducts);
+    public function listing()
+    {
+        $products = Product::take(9)->get();
+        return view("listing", ['product' => $products]);
     }
-    public function product(){
-        return view("product")->with('products',$this->allproducts);
+
+    public function product(Request $res)//nó request bắt được cái id nhé
+    {
+        $product_id = $res->get('product_id');//  key đường đẫn
+        $product = Product::find($product_id);//Tìm  id trong list product để hiển thị
+        $cate = $product['category_id'];
+        $product = Product::where("category_id", $cate)->orderBy('product_name', 'asc')->get();
+        $products = Product::take(4)->get();
+
+        return view("product", ['product' => $product], ['products' => $products]);
+
+
     }
-    public function listing(){
-        return view("listing")->with('listing',$this->allproducts);
+
+    public function cart()
+    {
+        $products = Product::where("category_id", 5)->take(10)->orderBy('product_name', 'asc')->get();// loc theo category
+        return view("cart", ['product' => $products]);
     }
 
 }
