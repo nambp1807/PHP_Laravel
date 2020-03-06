@@ -26,16 +26,16 @@ $factory->define(User::class, function (Faker $faker) {
     ];
 });
 
-//$factory->define(\App\Category::class,function (Faker $faker){
-//   return [
-//       'category_name' => $faker ->unique()->name
-//   ];
-//});
-//$factory->define(\App\Brand::class,function (Faker $faker){
-//    return [
-//        'brand_name' => $faker->unique()->name
-//    ];
-//});
+$factory->define(\App\Category::class,function (Faker $faker){
+   return [
+       'category_name' => $faker ->unique()->name
+   ];
+});
+$factory->define(\App\Brand::class,function (Faker $faker){
+    return [
+        'brand_name' => $faker->unique()->name
+    ];
+});
 $factory->define(\App\Product::class,function (Faker $faker){
     return[
         'product_name'=> $faker->unique()->name,
@@ -44,8 +44,8 @@ $factory->define(\App\Product::class,function (Faker $faker){
         'gallery'   => 'img/products/'.random_int(1,12).'.jpg'.",".'img/products/'.random_int(1,12).'.jpg',
         'price'=>random_int(1,1000),
         'quantity'=>random_int(1,100),
-        'category_id'=>random_int(1,10) ,
-        'brand_id'=> random_int(1,10)
+        'category_id'=>random_int(1,3) ,
+        'brand_id'=> random_int(1,5)
 
     ];
 });

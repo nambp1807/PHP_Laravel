@@ -11,10 +11,9 @@ class WebController extends Controller
 
     public function home()
     {
-        $newests = Product::orderBy('created_at','desc')->take(10)->get();
-        // $products = Products::orderBy('created_at','desc')->take(10)->get();
-        $cheaps = Product::orderBy('price','asc')->take(10)->get();
-        $exs = Product::orderBy('price','desc')->take(10)->get();
+        $newests = Product::orderBy('created_at','desc')->take(4)->get();
+        $cheaps = Product::orderBy('price')->take(4)->get();
+        $exs = Product::orderBy('price','desc')->take(4)->get();
         return view("home",['newests'=>$newests,'cheaps'=>$cheaps,'exs'=>$exs]);
     }
 
