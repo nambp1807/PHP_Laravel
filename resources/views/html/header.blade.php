@@ -37,7 +37,7 @@
                 <div class="col-lg-2 col-md-2">
                     <div class="logo">
                         <a href="./index.html">
-                            <img src="img/logo.png" alt="">
+                            <img src="{{asset("img/logo.png")}}" alt="">
                         </a>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
+                                            <td class="si-pic"><img src="{{asset("img/select-product-1.jpg")}}" alt=""></td>
                                             <td class="si-text">
                                                 <div class="product-selected">
                                                     <p>$60.00 x 1</p>
@@ -80,7 +80,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
+                                            <td class="si-pic"><img src="{{asset("img/select-product-2.jpg")}}" alt=""></td>
                                             <td class="si-text">
                                                 <div class="product-selected">
                                                     <p>$60.00 x 1</p>
@@ -134,7 +134,9 @@
                     <li><a href="./shop.html">Shop</a></li>
                     <li><a href="#">Collection</a>
                         <ul class="dropdown">
-                            <li><a href="#">Men's</a></li>
+                            @foreach(\App\Category::all() as $c)
+                            <li><a href="{{url("/listing/{$c->id}")}}">{{$c->category_name}}</a></li>
+                            @endforeach
                             <li><a href="#">Women's</a></li>
                             <li><a href="#">Accessor's</a></li>
                         </ul>
