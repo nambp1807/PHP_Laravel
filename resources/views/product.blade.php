@@ -154,7 +154,7 @@
                 </div>
 
                 <!-- product -->
-                @foreach ($product_cate as $p)
+                @foreach ($category_product as $p)
                     <div class="col-md-3 col-xs-6">
                         <div class="product">
                             <div class="product-img">
