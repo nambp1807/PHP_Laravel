@@ -17,10 +17,9 @@ class WebController extends Controller
         return view("home",['newests'=>$newests,'cheaps'=>$cheaps,'exs'=>$exs]);
     }
 
-    public function listing()
-    {
-        $products = Product::take(9)->orderBy('created_at','desc')->get();
-        return view("listing", ['product' => $products]);
+    public function listing($id){
+        $products = Product::where("category_id",$id)->take(20)->orderBy('created_at','desc')->get();// loc theo category
+        return view("listing",['product'=>$products]);
     }
 
     public function product(Request $res)//nó request bắt được cái id nhé
