@@ -400,47 +400,47 @@
     </section>
     <!-- Product Shop Section End -->
 
-    <!-- Related Products Section End -->
-    <div class="related-products spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h2>Related Products</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                @foreach($product as $p)
-                <div class="col-lg-3 col-sm-6">
-                    <div class="product-item">
-                        <div class="pi-pic">
-                            <img style="height: 290px;width: 330px" src="{{$p->thumbnail}}" alt="">
-                            <div class="sale">Sale</div>
-                            <div class="icon">
-                                <i class="icon_heart_alt"></i>
-                            </div>
-                            <ul>
-                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>
-                                <li class="quick-view"><a href="/cart">+ Quick View</a></li>
-                                <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="pi-text">
+{{--    <!-- Related Products Section End -->--}}
+{{--    <div class="related-products spad">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row">--}}
+{{--                <div class="col-lg-12">--}}
+{{--                    <div class="section-title">--}}
+{{--                        <h2>Related Products</h2>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="row">--}}
+{{--                @foreach($product as $p)--}}
+{{--                <div class="col-lg-3 col-sm-6">--}}
+{{--                    <div class="product-item">--}}
+{{--                        <div class="pi-pic">--}}
+{{--                            <img style="height: 290px;width: 330px" src="{{$p->thumbnail}}" alt="">--}}
+{{--                            <div class="sale">Sale</div>--}}
+{{--                            <div class="icon">--}}
+{{--                                <i class="icon_heart_alt"></i>--}}
+{{--                            </div>--}}
+{{--                            <ul>--}}
+{{--                                <li class="w-icon active"><a href="#"><i class="icon_bag_alt"></i></a></li>--}}
+{{--                                <li class="quick-view"><a href="/cart">+ Quick View</a></li>--}}
+{{--                                <li class="w-icon"><a href="#"><i class="fa fa-random"></i></a></li>--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                        <div class="pi-text">--}}
 {{--                            <div class="category-name">Coat</div>--}}
-                            <a href="#">
-                                <h5>{{$p->product_name}}</h5>
-                            </a>
-                            <div class="product-price">
-                                $99.00
-                                <span>{{$p->price}}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-    <!-- Related Products Section End -->
+{{--                            <a href="#">--}}
+{{--                                <h5>{{$p->product_name}}</h5>--}}
+{{--                            </a>--}}
+{{--                            <div class="product-price">--}}
+{{--                                $99.00--}}
+{{--                                <span>{{$p->price}}</span>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                @endforeach--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--    <!-- Related Products Section End -->--}}
 @endsection
