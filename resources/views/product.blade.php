@@ -133,7 +133,7 @@
                         @foreach($product as $p)
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
-                                <img class="product-big-img" src="" alt="">
+                                <img class="product-big-img" src="{{asset($p->thumbnail)}}" alt="">
                                 <div class="zoom-icon">
                                     <i class="fa fa-search-plus"></i>
                                 </div>
