@@ -454,11 +454,11 @@
             </div>
         </div>
         <div class="row">
-            @foreach($brand_product as $p)
+            @foreach($brand_product as $bp)
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <img style="height: 290px;width: 330px" src="{{$p->thumbnail}}" alt="">
+                            <img style="height: 290px;width: 330px" src="{{asset($bp->thumbnail)}}" alt="">
                             <div class="sale">Sale</div>
                             <div class="icon">
                                 <i class="icon_heart_alt"></i>
@@ -472,7 +472,7 @@
                         <div class="pi-text">
                             {{--                            <div class="category-name">Coat</div>--}}
                             <a href="#">
-                                <h5>{{$p->product_name}}</h5>
+                                <h5>{{$bp->product_name}}</h5>
                             </a>
                             <div class="product-price">
                                 $99.00
