@@ -411,7 +411,7 @@
                 </div>
             </div>
             <div class="row">
-                @foreach($products as $p)
+                @foreach($product as $p)
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
