@@ -25,9 +25,9 @@ class WebController extends Controller
     public function product()//nó request bắt được cái id nhé
     {
         $product = Product::find(1);//tra ve 1 object Product theo id
-       // $category_products = Product::Where('category_id',$product->category_id)->Where('id','!=',$product->id)->take(10)->get();
-        //$brand_products = Product::Where('brand_id',$product->brand_id)->Where('id','!=',$product->id)->take(10)->get();
-        return view('product',['product'=>$product]);
+        $category_products = Product::Where('category_id',$product->category_id)->Where('id','!=',$product->id)->take(10)->get();
+        $brand_products = Product::Where('brand_id',$product->brand_id)->Where('id','!=',$product->id)->take(10)->get();
+        return view('product',['product'=>$product,'category_product'=>$category_products,'brand_id'=>$brand_products]);
     }
 
     public function cart()

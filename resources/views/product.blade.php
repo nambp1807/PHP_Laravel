@@ -130,7 +130,7 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="row">
-                        @foreach($product as $p)
+                        @foreach($category_product as $p)
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
                                 <img class="product-big-img" src="{{$p->thumbnail}}" alt="">
