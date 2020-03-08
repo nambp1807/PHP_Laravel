@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="{{asset("css/bootstrap.min.css","true")}}" />
-    <link rel="stylesheet" href="{{asset("css/font-awesome.min.css","true")}}" />
-    <link rel="stylesheet" href="{{asset("css/them-ify-icons.css","true")}}" />
-    <link rel="stylesheet" href="{{asset("css/elegant-icons.css","true")}}" />
-    <link rel="stylesheet" href="{{asset("css/owl.carousel.min.css","true")}}" />
-    <link rel="stylesheet" href="{{asset("css/nice-select.css","true")}}" />
-    <link rel="stylesheet" href="{{asset("css/jquery-ui.min.css","true")}}" />
-    <link rel="stylesheet" href="{{asset("css/slick-nav.min.css","true")}}" />
-    <link rel="stylesheet" href="{{asset("css/style.css","true")}}"/>
+    <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}" />
+    <link rel="stylesheet" href="{{asset("css/font-awesome.min.css")}}" />
+    <link rel="stylesheet" href="{{asset("css/them-ify-icons.css")}}" />
+    <link rel="stylesheet" href="{{asset("css/elegant-icons.css")}}" />
+    <link rel="stylesheet" href="{{asset("css/owl.carousel.min.css")}}" />
+    <link rel="stylesheet" href="{{asset("css/nice-select.css")}}" />
+    <link rel="stylesheet" href="{{asset("css/jquery-ui.min.css")}}" />
+    <link rel="stylesheet" href="{{asset("css/slick-nav.min.css")}}" />
+    <link rel="stylesheet" href="{{asset("css/style.css")}}"/>
 </head>
