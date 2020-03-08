@@ -1,4 +1,5 @@
 @extends('layout')
+@section('title',"Trang chủ")
 
 @section('content')
     <!-- Banner Section Begin -->
@@ -14,8 +15,8 @@
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="single-banner">
-                        <img src="{{asset("img/banner-2.jpg")}}" alt="">
+                    <div class="single-banner" herf="/product">
+                        <img  src="{{asset("img/banner-2.jpg")}}" alt="">
                         <div class="inner-text">
                             <h4>Women’s</h4>
                         </div>

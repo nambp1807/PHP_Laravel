@@ -39,5 +39,5 @@ Route ::get("/form-edit","UserController@listName");
 Route ::get("/","WebController@home");
 Route ::get("/product/{id}","WebController@product");
 Route ::get("/listing/{id}","WebController@listing");
-Route ::get("/cart","WebController@cart");
+Route ::get("/cart/{id}","WebController@cart");
 

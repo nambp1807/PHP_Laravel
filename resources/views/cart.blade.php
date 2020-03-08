@@ -18,13 +18,12 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($product as $p)
                                 <tr>
-                                    <td class="cart-pic first-row"><img style="height: 100px;width: 150px" src="{{asset($p->thumbnail)}}" alt=""></td>
+                                    <td class="cart-pic first-row"><img style="height: 100px;width: 150px" src="{{asset($product->thumbnail)}}" alt=""></td>
                                     <td class="cart-title first-row">
-                                        <h5>{{$p->product_name}}</h5>
+                                        <h5>{{$product->product_name}}</h5>
                                     </td>
-                                    <td class="p-price first-row"><p>{{ $p->price}}</p></td>
+                                    <td class="p-price first-row"><p>{{ $product->price}}</p></td>
                                     <td class="qua-col first-row">
                                         <div class="quantity">
                                             <div class="pro-qty">
@@ -32,10 +31,9 @@
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="total-price first-row"><p>{{ $p->price}}</p></td>
+                                    <td class="total-price first-row"><p>{{ $product->price}}</p></td>
                                     <td class="close-td first-row"><i class="ti-close"></i></td>
                                 </tr>
-                            @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -56,8 +54,8 @@
                         <div class="col-lg-4 offset-lg-4">
                             <div class="proceed-checkout">
                                 <ul>
-                                    <li class="subtotal">Subtotal <span>$240.00</span></li>
-                                    <li class="cart-total">Total <span>$240.00</span></li>
+                                    <li class="subtotal">Subtotal <span>{{ $product->price}}</span></li>
+                                    <li class="cart-total">Total <span>{{ $product->price}}</span></li>
                                 </ul>
                                 <a href="/" class="proceed-btn">PROCEED TO CHECK OUT</a>
                             </div>

@@ -31,11 +31,10 @@ class WebController extends Controller
         return view('product',['product'=>$product,'category_product'=>$category_products,'brand_product'=>$brand_products]);
     }
 
-    public function cart()
+    public function cart($id)
     {
-        $carts = Product::take(5)->orderBy('product_name', 'asc')->get();// loc theo category
-
-        return view("cart", ['product' => $carts]);
+        $product = Product::find($id);//tra ve 1 object Product theo id
+        return view("cart", ['product' => $product]);
     }
 
 }
