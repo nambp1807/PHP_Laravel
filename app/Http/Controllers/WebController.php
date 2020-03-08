@@ -28,13 +28,14 @@ class WebController extends Controller
         $category_products = Product::Where('category_id',$product->category_id)->Where('id','!=',$product->id)->take(4)->get();
         $brand_products = Product::Where('brand_id',$product->brand_id)->Where('id','!=',$product->id)->take(4)->get();
 
-        return view('product',['Product'=>$product,'category_product'=>$category_products,'brand_product'=>$brand_products]);
+        return view('product',['product'=>$product,'category_product'=>$category_products,'brand_product'=>$brand_products]);
     }
 
     public function cart()
     {
-        $products = Product::where("category_id", 5)->take(10)->orderBy('product_name', 'asc')->get();// loc theo category
-        return view("cart", ['product' => $products]);
+        $carts = Product::take(5)->orderBy('product_name', 'asc')->get();// loc theo category
+
+        return view("cart", ['product' => $carts]);
     }
 
 }

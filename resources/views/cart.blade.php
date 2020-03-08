@@ -20,7 +20,7 @@
                             <tbody>
                             @foreach($product as $p)
                                 <tr>
-                                    <td class="cart-pic first-row"><img style="height: 100px;width: 150px" src="{{ $p->thumbnail}}" alt=""></td>
+                                    <td class="cart-pic first-row"><img style="height: 100px;width: 150px" src="{{asset($p->thumbnail)}}" alt=""></td>
                                     <td class="cart-title first-row">
                                         <h5>{{$p->product_name}}</h5>
                                     </td>

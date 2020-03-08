@@ -39,16 +39,16 @@
     </a>
     <div class="row" id="product-filter">
 
-        @foreach ($newests as $p)
+        @foreach ($newests as $n)
             <div class="mix col-lg-3 col-md-6 best">
                 <div class="product-item">
                     <figure>
-                        <img style="height: 270px;width: 330px" src="{{$p->thumbnail}}" alt="">
+                        <img style="height: 270px;width: 330px" src="{{$n->thumbnail}}" alt="">
                     </figure>
                     <div class="product-info">
-                        <h6>{{ $p->product_name}}</h6>
-                        <p>$ {{ $p->price}}</p>
-                        <a href="/listing" class="site-btn btn-line">+ Quick View</a>
+                        <h6>{{ $n->product_name}}</h6>
+                        <p>$ {{ $n->price}}</p>
+                        <a href="/product/{{$n->id}}" class="site-btn btn-line">+ Quick View</a>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
             </a>
             <div class="row" id="product-filter">
 
-                @foreach ($newests as $c)
+                @foreach ($cheaps as $c)
                     <div class="mix col-lg-3 col-md-6 best">
                         <div class="product-item">
                             <figure>
@@ -68,7 +68,7 @@
                             <div class="product-info">
                                 <h6>{{ $c->product_name}}</h6>
                                 <p>$ {{ $c->price}}</p>
-                                <a href="/listing" class="site-btn btn-line">+ Quick View</a><!--Cái href để trỏ đến cái id đấy-->
+                                <a href="/product/{{$c->id}}" class="site-btn btn-line">+ Quick View</a><!--Cái href để trỏ đến cái id đấy-->
                             </div>
                         </div>
                     </div>
@@ -81,16 +81,16 @@
                     </a>
                     <div class="row" id="product-filter">
 
-                        @foreach ($exs as $c)
+                        @foreach ($exs as $e)
                             <div class="mix col-lg-3 col-md-6 best">
                                 <div class="product-item">
                                     <figure>
-                                        <img style="height: 270px;width: 330px" src="{{$c->thumbnail}}" alt="">
+                                        <img style="height: 270px;width: 330px" src="{{$e->thumbnail}}" alt="">
                                     </figure>
                                     <div class="product-info">
-                                        <h6>{{ $c->product_name}}</h6>
-                                        <p>$ {{ $c->price}}</p>
-                                        <a href="/listing" class="site-btn btn-line">+ Quick View</a>
+                                        <h6>{{ $e->product_name}}</h6>
+                                        <p>$ {{$e->price}}</p>
+                                        <a href="/product/{{$e->id}}" class="site-btn btn-line">+ Quick View</a>
                                     </div>
                                 </div>
                             </div>

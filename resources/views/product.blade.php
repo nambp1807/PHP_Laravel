@@ -132,7 +132,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
-                                <img class="product-big-img" src="{{asset($Product->thumbnail)}}" alt="">
+                                <img class="product-big-img" src="{{asset($product->thumbnail)}}" alt="">
                                 <div class="zoom-icon">
                                     <i class="fa fa-search-plus"></i>
                                 </div>
@@ -146,7 +146,7 @@
                             <div class="product-details">
                                 <div class="pd-title">
                                     <span>oranges</span>
-                                    <h3>{{$Product ->product_name }}</h3>
+                                    <h3>{{$product ->product_name }}</h3>
                                     <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
                                 </div>
                                 <div class="pd-rating">
@@ -158,8 +158,8 @@
                                     <span>(5)</span>
                                 </div>
                                 <div class="pd-desc">
-                                    <p>{{$Product -> product_desc}}</p>
-                                    <h4>{{$Product -> price}}</h4>
+                                    <p>{{$product -> product_desc}}</p>
+                                    <h4>{{$product -> price}}</h4>
                                 </div>
                                 <div class="pd-color">
                                     <h6>Color</h6>
@@ -206,14 +206,6 @@
                                     <li><span>CATEGORIES</span>: More Accessories, Wallets & Cases</li>
                                     <li><span>TAGS</span>: Clothing, T-shirt, Woman</li>
                                 </ul>
-                                <div class="pd-share">
-                                    <div class="p-code">Sku : 00012</div>
-                                    <div class="pd-social">
-                                        <a href="#"><i class="ti-facebook"></i></a>
-                                        <a href="#"><i class="ti-twitter-alt"></i></a>
-                                        <a href="#"><i class="ti-link-edin"></i></a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -420,8 +412,7 @@
                                 <h5>{{$cp->product_name}}</h5>
                             </a>
                             <div class="product-price">
-                                $99.00
-                                <span>{{$cp->price}}</span>
+                                <p>{{$cp->price}}</p>
                             </div>
                         </div>
                     </div>
@@ -463,8 +454,7 @@
                                 <h5>{{$bp->product_name}}</h5>
                             </a>
                             <div class="product-price">
-                                $99.00
-                                <span>{{$bp->price}}</span>
+                                <p>{{$bp->price}}</p>
                             </div>
                         </div>
                     </div>

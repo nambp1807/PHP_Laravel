@@ -40,9 +40,9 @@ $factory->define(\App\Product::class,function (Faker $faker){
     return[
         'product_name'=> $faker->unique()->name,
         'product_desc'=> $faker->text,
-        'thumbnail'=> 'img/products/'.random_int(1,12).'.jpg',
-        'gallery'   => 'img/products/'.random_int(1,12).'.jpg'.",".'img/products/'.random_int(1,12).'.jpg',
-        'price'=>random_int(1,1000),
+        'thumbnail'=> 'img/products/'.random_int(1,30).'.jpg',
+        'gallery'   => 'img/products/'.random_int(1,30).'.jpg'.",".'img/products/'.random_int(1,30).'.jpg',
+        'price'=>random_int(1,100),
         'quantity'=>random_int(1,100),
         'category_id'=>random_int(1,3) ,
         'brand_id'=> random_int(1,5)
