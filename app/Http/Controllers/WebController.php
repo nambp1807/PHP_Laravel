@@ -18,7 +18,7 @@ class WebController extends Controller
     }
 
     public function listing($id){
-        $products = Product::where("category_id",$id)->take(20)->orderBy('created_at','desc')->get();// loc theo category
+        $products = Product::where("category_id",$id)->take(9)->orderBy('created_at','desc')->get();// loc theo category
         return view("listing",['product'=>$products]);
     }
 
