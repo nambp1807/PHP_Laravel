@@ -18,7 +18,8 @@ class WebController extends Controller
     }
 
     public function listing($id){
-        $products = Product::where("category_id",$id)->take(9)->orderBy('created_at','desc')->get();// loc theo category
+        $products = Product::where("category_id",$id)->take(9)->get();
+
         return view("listing",['product'=>$products]);
     }
 
@@ -34,7 +35,11 @@ class WebController extends Controller
     public function cart($id)
     {
         $product = Product::find($id);//tra ve 1 object Product theo id
-        return view("cart", ['product' => $product]);
+        $product->update([
+            "quantity" => $product->quantity-1
+        ]);
+        return redirect()->to("product/{$product->id}");
+//        return view("cart", ['product' => $product]);
     }
 
 }

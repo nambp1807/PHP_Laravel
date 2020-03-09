@@ -134,6 +134,10 @@
                         <div class="col-lg-6">
                             <div class="product-pic-zoom">
                                 <img class="product-big-img" src="{{asset($product->thumbnail)}}" alt="">
+                                @php
+                                $gallery =$product ->gallery;
+                                $gallery = explode(",",$gallery);
+                                @endphp
                                 <div class="zoom-icon">
                                     <i class="fa fa-search-plus"></i>
                                 </div>
@@ -141,12 +145,12 @@
 
                             <div class="product-thumbs">
                                     <div class="product-thumbs-track ps-slider owl-carousel">
+                                        @foreach($gallery as $g)
                                         <div class="pt active" >
-                                            <img src="{{asset($product->thumbnail)}}" alt=""/>
+                                            <img src="{{asset($g)}}" alt=""/>
                                         </div>
-                                        <div class="pt active" >
-                                            <img src="{{asset($product->thumbnail)}}" alt=""/>
-                                        </div>
+                                        @endforeach
+
 
                                     </div>
                             </div>
@@ -168,7 +172,11 @@
                                 </div>
                                 <div class="pd-desc">
                                     <p>{{$product -> product_desc}}</p>
-                                    <h4>{{$product -> price}}</h4>
+                                    <h4>Giá : {{$product -> price}}</h4>
+                                    <h4>Số lượng : {{$product -> quantity}}</h4>
+                                    <h4>Danh mục : {{$product ->Category->category_name}}</h4>
+                                    <h4>Thương hiệu : {{$product ->Brand->brand_name}}</h4>
+
                                 </div>
                                 <div class="pd-color">
                                     <h6>Color</h6>
