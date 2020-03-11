@@ -11,9 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route for admin
+
+Route::prefix("admin")->group(function (){
+    include_once("admin.php");
 });
+
+
 //Route::METHOD(path_string,HANDLE_FUNCITON);
 // Method : post get put delete ...  CRUD
 
